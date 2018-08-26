@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"github.com/Brandon2255p/tipping-go/account"
 )
 
 func main() {
-	fmt.Printf("Testing package \n")
+	account.Setup()
+
 }
