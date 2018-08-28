@@ -1,0 +1,14 @@
+version: '3'
+services:
+  account_service:
+    build: .
+    security_opt:
+      - seccomp:unconfined
+    # entrypoint: dlv debug /go/bin/main -l 0.0.0.0:2345 --headless=true --log=true -- server
+    # volumes:
+    #   - .:/opt/go/src/Brandon2255p/tipping-go
+    ports:
+      - "2345:2345"
+      - "8080:8080"
+    expose:
+      - "2345"
